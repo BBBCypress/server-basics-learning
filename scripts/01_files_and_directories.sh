@@ -59,8 +59,8 @@ echo
 echo "=== 看一下文件内容 ==="
 
 # cat
-# 先记成“把整个文件直接倒出来看”
-# 名字虽然来自 concatenate，但现在先不用管这个
+# 记成“把整个文件直接倒出来看”
+# 名字来自 concatenate
 cat raw_data/sample1.txt
 
 echo
@@ -79,7 +79,7 @@ echo "=== 再把文件改个名字 ==="
 # mv
 # move
 # 既能移动，也能改名
-# 这里只演示改名
+# 改名
 mv notes/sample1_copy.txt notes/sample1_renamed.txt
 
 ls -lah notes
