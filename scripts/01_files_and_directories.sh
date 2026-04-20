@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-# 这一份开始练最基础的文件操作
-# 先只练安全的：
+# 这一份开始练基础的文件操作
+# 先练安全的：
 # 建目录、建文件、写一点内容、复制、改名、查看
 # 删除先不急，单独放后面学
-# 先把“安全整理文件”这件事练熟
+# 先把“安全整理文件”练熟
 
 PRACTICE_DIR="$HOME/server_practice_files"
 
@@ -35,7 +35,7 @@ echo
 echo "=== 创建几个空文件 ==="
 
 # touch
-# 先记成“碰一下，文件就有了”
+# 记成“碰一下，文件就有了”
 # 最常见用法就是创建空文件
 touch raw_data/sample1.txt
 touch raw_data/sample2.txt
