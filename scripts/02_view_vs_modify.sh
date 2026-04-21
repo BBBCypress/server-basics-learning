@@ -1,14 +1,8 @@
 #!/usr/bin/env bash
 
-# 这一份主要是把“查看”和“修改”分开练
-# 这个概念在服务器上特别重要
-#
-# 很多时候不是不会命令，而是没分清：
-# 现在这一步只是看看，还是已经真的改到文件了
-#
-# 先把思路记住：
+# 这一份把“查看”和“修改”分开练
 # 查看类命令风险一般低一些
-# 修改类命令就要先确认目录、对象、文件名
+# 修改类命令必须先确认目录、对象、文件名
 
 PRACTICE_DIR="$HOME/server_practice_view_modify"
 mkdir -p "$PRACTICE_DIR"
@@ -29,7 +23,7 @@ echo "=== 第一部分：先练查看类命令 ==="
 # pwd
 # print working directory
 # 直接记成：把当前位置打印出来
-# 这是最值得养成的习惯之一
+# 记得经常看看，确认自己在哪儿
 echo "--- pwd: 先看自己在哪 ---"
 pwd
 echo
@@ -51,7 +45,7 @@ ls -lah demo
 echo
 
 # cat
-# 先记成：把整个文件直接倒出来看
+# 记成：把整个文件直接倒出来看
 # 查看小文件很方便
 echo "--- cat: 直接看整个文件 ---"
 cat demo/file1.txt
@@ -74,7 +68,7 @@ echo
 # less
 # 这个更适合看长文件
 # 这里不直接进入交互模式，不然脚本会卡住
-# 先记住用途就行
+# 先记住用途
 echo "--- less: 更适合翻长文件（这里只记，不在脚本里实际进入） ---"
 echo "示例：less demo/file1.txt"
 echo
@@ -128,8 +122,8 @@ ls -lah demo/results
 echo
 
 # echo + >
-# > 这个很重要，要单独记
-# 它不是“查看”，而是“覆盖写入”
+# > 重要，单独记
+# 不是“查看”，而是“覆盖写入”
 # 如果文件原来有内容，会被新的内容盖掉
 echo "--- echo + > : 覆盖写入 ---"
 echo "this line overwrites old content" > demo/results/empty.txt
@@ -143,7 +137,7 @@ echo "append one more line" >> demo/results/empty.txt
 cat demo/results/empty.txt
 echo
 
-echo "=== 第三部分：把两类命令放在脑子里分清楚 ==="
+echo "=== 第三部分：把两类命令分清楚 ==="
 
 echo "查看类，先记这些："
 echo "pwd / ls / cat / head / tail / less / du / df"
@@ -152,6 +146,3 @@ echo
 echo "修改类，先记这些："
 echo "mkdir / touch / cp / mv / echo > / echo >>"
 echo
-
-echo "这份最重要的不是命令多少，而是先分清："
-echo "现在是在看，还是已经在改。"
